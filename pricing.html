@@ -10,98 +10,18 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     .pricing-section-heading {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      margin-top: 3rem;
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1.5rem; margin-top: 3rem;
     }
     .pricing-section-heading:first-of-type { margin-top: 0; }
     .pricing-section-heading h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text);
-      white-space: nowrap;
+      font-size: 1.3rem; font-weight: 700; color: var(--text); white-space: nowrap;
     }
     .pricing-section-heading::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--card-border);
+      content: ''; flex: 1; height: 1px; background: var(--card-border);
     }
-    .card-yearly {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      margin-top: 0.3rem;
-    }
+    .card-yearly { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.3rem; }
     .card-yearly span { color: var(--accent); font-weight: 600; }
-
-    /* ── Billing Toggle ── */
-    .billing-toggle-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.85rem;
-      margin-bottom: 2.5rem;
-    }
-    .billing-label {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      transition: color 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .billing-label.active { color: var(--text); }
-    .save-tag {
-      background: rgba(107,63,255,0.15);
-      border: 1px solid rgba(107,63,255,0.3);
-      color: var(--accent);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 0.15rem 0.5rem;
-      border-radius: 999px;
-      letter-spacing: 0.03em;
-    }
-    .toggle-switch {
-      position: relative;
-      width: 52px;
-      height: 28px;
-      cursor: pointer;
-    }
-    .toggle-switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-      position: absolute;
-    }
-    .toggle-track {
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 999px;
-      transition: background 0.25s, border-color 0.25s;
-    }
-    .toggle-switch input:checked ~ .toggle-track {
-      background: var(--primary);
-      border-color: var(--primary);
-    }
-    .toggle-knob {
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      width: 20px;
-      height: 20px;
-      background: #fff;
-      border-radius: 50%;
-      transition: transform 0.25s;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-    }
-    .toggle-switch input:checked ~ .toggle-knob {
-      transform: translateX(24px);
-    }
   </style>
 </head>
 <body>
@@ -113,39 +33,42 @@
     <span class="name">StreamVault</span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="pricing.html" class="active">Pricing</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp Us</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="pricing.html" class="active" data-i18n="nav.pricing">Pricing</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    <li><a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.whatsapp">💬 WhatsApp Us</a></li>
   </ul>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="ar">AR</button>
+  </div>
   <button class="hamburger" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <div class="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="pricing.html" class="active">Pricing</a>
-  <a href="faq.html">FAQ</a>
-  <a href="contact.html">Contact</a>
-  <a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="mob-cta">💬 WhatsApp Us</a>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="pricing.html" class="active" data-i18n="nav.pricing">Pricing</a>
+  <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="mob-cta" data-i18n="nav.whatsapp">💬 WhatsApp Us</a>
 </div>
 
 <!-- ── Back Button ───────────────────────────────── -->
 <div class="container" style="padding-top: 6rem; padding-bottom: 0;">
-  <button onclick="window.history.length > 1 ? history.back() : window.location='index.html'" class="back-btn">
-    ←
-  </button>
+  <button onclick="window.history.length > 1 ? history.back() : window.location='index.html'" class="back-btn">←</button>
 </div>
 
 <!-- ── Page Header ────────────────────────────────── -->
 <div class="page-header" style="padding-top: 2rem;">
   <div class="page-header-glow"></div>
   <div class="container">
-    <p class="section-label">Transparent Pricing</p>
-    <h1>Choose Your <span class="gradient-text">Plan</span></h1>
-    <p>No hidden fees. No long contracts. Just premium streaming at a fraction of the price — cancel anytime via WhatsApp.</p>
+    <p class="section-label" data-i18n="pricing.label">Transparent Pricing</p>
+    <h1 data-i18n-html="pricing.title">Choose Your <span class="gradient-text">Plan</span></h1>
+    <p data-i18n="pricing.desc">No hidden fees. No long contracts. Just premium streaming at a fraction of the price — cancel anytime via WhatsApp.</p>
   </div>
 </div>
 
@@ -153,23 +76,12 @@
 <section class="section" style="padding-top: 1rem;">
   <div class="container">
 
-    <!-- Billing Toggle -->
-    <div class="billing-toggle-wrap">
-      <span class="billing-label active" id="label-monthly">Monthly</span>
-      <label class="toggle-switch">
-        <input type="checkbox" id="billingToggle" />
-        <span class="toggle-track"></span>
-        <span class="toggle-knob"></span>
-      </label>
-      <span class="billing-label" id="label-yearly">Yearly <span class="save-tag">Save up to 60%</span></span>
-    </div>
-
     <!-- Netflix -->
     <div id="netflix" class="pricing-section-heading">
       <div class="brand-logo bg-netflix" style="width:32px;height:32px;border-radius:8px;flex-shrink:0;">
         <img src="https://cdn.simpleicons.org/netflix/ffffff" alt="" width="18" height="18" />
       </div>
-      <h2>Netflix Plans</h2>
+      <h2 data-i18n="pricing.section.netflix">Netflix Plans</h2>
     </div>
     <div class="pricing-grid" style="margin-bottom: 3rem;">
 
@@ -179,6 +91,10 @@
           <img src="https://cdn.simpleicons.org/netflix/ffffff" alt="Netflix" />
         </div>
         <div class="card-name">Netflix Basic</div>
+        <div class="card-bill-toggle">
+          <button class="cbill cbill-active" data-p="monthly" data-i18n="billing.monthly">Monthly</button>
+          <button class="cbill" data-p="yearly" data-i18n="billing.yearly">Yearly</button>
+        </div>
         <div class="card-price">
           <span class="amount" data-monthly="$3" data-yearly="$20">$3</span>
           <span class="period">/ month</span>
@@ -186,22 +102,22 @@
         </div>
         <hr class="card-divider" />
         <ul class="card-features">
-          <li><span class="check">✓</span> Your own dedicated profile</li>
-          <li><span class="check">✓</span> HD streaming available</li>
-          <li><span class="check">✓</span> Cancel anytime via WhatsApp</li>
+          <li><span class="check">✓</span> <span data-i18n="feat.profile">Your own dedicated profile</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.hd">HD streaming available</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.cancel">Cancel anytime via WhatsApp</span></li>
         </ul>
         <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Basic%20%28%243%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Basic%20%28%243%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Basic%20%28Yearly%20-%20%2420%2Fyear%29%20from%20StreamVault.%20Please%20set%20me%20up!"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btn.shared">
           💬 Order Shared Plan
         </a>
         <div class="full-account-opt">
-          <p class="full-account-label">Want a private full account?</p>
-          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Basic%20Full%20Account%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
+          <p class="full-account-label" data-i18n="btn.full.label">Want a private full account?</p>
+          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Basic%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Basic%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Basic%20Full%20Account%20%28Yearly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
-             target="_blank" rel="noopener" class="btn-full-account">
+             target="_blank" rel="noopener" class="btn-full-account" data-i18n="btn.full">
             🔒 Order Full Account
           </a>
         </div>
@@ -213,6 +129,10 @@
           <img src="https://cdn.simpleicons.org/netflix/ffffff" alt="Netflix" />
         </div>
         <div class="card-name">Netflix Standard</div>
+        <div class="card-bill-toggle">
+          <button class="cbill cbill-active" data-p="monthly" data-i18n="billing.monthly">Monthly</button>
+          <button class="cbill" data-p="yearly" data-i18n="billing.yearly">Yearly</button>
+        </div>
         <div class="card-price">
           <span class="amount" data-monthly="$4" data-yearly="$50">$4</span>
           <span class="period">/ month</span>
@@ -220,22 +140,22 @@
         </div>
         <hr class="card-divider" />
         <ul class="card-features">
-          <li><span class="check">✓</span> Your own dedicated profile</li>
-          <li><span class="check">✓</span> Full HD streaming on 2 screens</li>
-          <li><span class="check">✓</span> Cancel anytime via WhatsApp</li>
+          <li><span class="check">✓</span> <span data-i18n="feat.profile">Your own dedicated profile</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.fhd">Full HD streaming on 2 screens</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.cancel">Cancel anytime via WhatsApp</span></li>
         </ul>
         <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Standard%20%28%244%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Standard%20%28%244%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Standard%20%28Yearly%20-%20%2450%2Fyear%29%20from%20StreamVault.%20Please%20set%20me%20up!"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btn.shared">
           💬 Order Shared Plan
         </a>
         <div class="full-account-opt">
-          <p class="full-account-label">Want a private full account?</p>
-          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Standard%20Full%20Account%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
+          <p class="full-account-label" data-i18n="btn.full.label">Want a private full account?</p>
+          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Standard%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Standard%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Standard%20Full%20Account%20%28Yearly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
-             target="_blank" rel="noopener" class="btn-full-account">
+             target="_blank" rel="noopener" class="btn-full-account" data-i18n="btn.full">
             🔒 Order Full Account
           </a>
         </div>
@@ -243,11 +163,15 @@
 
       <!-- Netflix Premium — Most Popular -->
       <div class="pricing-card featured fade-up">
-        <span class="popular-badge">⭐ Most Popular</span>
+        <span class="popular-badge" data-i18n="badge.popular">⭐ Most Popular</span>
         <div class="brand-logo bg-netflix">
           <img src="https://cdn.simpleicons.org/netflix/ffffff" alt="Netflix" />
         </div>
         <div class="card-name">Netflix Premium</div>
+        <div class="card-bill-toggle">
+          <button class="cbill cbill-active" data-p="monthly" data-i18n="billing.monthly">Monthly</button>
+          <button class="cbill" data-p="yearly" data-i18n="billing.yearly">Yearly</button>
+        </div>
         <div class="card-price">
           <span class="amount" data-monthly="$5" data-yearly="$60">$5</span>
           <span class="period">/ month</span>
@@ -255,22 +179,22 @@
         </div>
         <hr class="card-divider" />
         <ul class="card-features">
-          <li><span class="check">✓</span> Your own dedicated profile</li>
-          <li><span class="check">✓</span> Ultra HD 4K + HDR streaming</li>
-          <li><span class="check">✓</span> Cancel anytime via WhatsApp</li>
+          <li><span class="check">✓</span> <span data-i18n="feat.profile">Your own dedicated profile</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.4k">Ultra HD 4K + HDR streaming</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.cancel">Cancel anytime via WhatsApp</span></li>
         </ul>
         <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Premium%20%28%245%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Premium%20%28%245%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Netflix%20Premium%20%28Yearly%20-%20%2460%2Fyear%29%20from%20StreamVault.%20Please%20set%20me%20up!"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btn.shared">
           💬 Order Shared Plan
         </a>
         <div class="full-account-opt">
-          <p class="full-account-label">Want a private full account?</p>
-          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Premium%20Full%20Account%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
+          <p class="full-account-label" data-i18n="btn.full.label">Want a private full account?</p>
+          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Premium%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Premium%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Netflix%20Premium%20Full%20Account%20%28Yearly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
-             target="_blank" rel="noopener" class="btn-full-account">
+             target="_blank" rel="noopener" class="btn-full-account" data-i18n="btn.full">
             🔒 Order Full Account
           </a>
         </div>
@@ -280,15 +204,19 @@
 
     <!-- Other Services -->
     <div class="pricing-section-heading">
-      <h2>Other Services</h2>
+      <h2 data-i18n="pricing.section.other">Other Services</h2>
     </div>
     <div class="pricing-grid">
 
       <!-- Shahid VIP — Most Popular -->
       <div id="shahid" class="pricing-card featured fade-up">
-        <span class="popular-badge">⭐ Most Popular</span>
+        <span class="popular-badge" data-i18n="badge.popular">⭐ Most Popular</span>
         <img src="logo-shahid.png.png" alt="Shahid VIP" class="service-logo-img" />
         <div class="card-name">Shahid VIP</div>
+        <div class="card-bill-toggle">
+          <button class="cbill cbill-active" data-p="monthly" data-i18n="billing.monthly">Monthly</button>
+          <button class="cbill" data-p="yearly" data-i18n="billing.yearly">Yearly</button>
+        </div>
         <div class="card-price">
           <span class="amount" data-monthly="$3" data-yearly="$20">$3</span>
           <span class="period">/ month</span>
@@ -296,22 +224,22 @@
         </div>
         <hr class="card-divider" />
         <ul class="card-features">
-          <li><span class="check">✓</span> Your own dedicated profile</li>
-          <li><span class="check">✓</span> Full Arabic &amp; exclusive content</li>
-          <li><span class="check">✓</span> HD streaming on all devices</li>
+          <li><span class="check">✓</span> <span data-i18n="feat.profile">Your own dedicated profile</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.shahid.content">Full Arabic & exclusive content</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.shahid.stream">HD streaming on all devices</span></li>
         </ul>
         <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Shahid%20VIP%20%28%243%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Shahid%20VIP%20%28%243%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Shahid%20VIP%20%28Yearly%20-%20%2420%2Fyear%29%20from%20StreamVault.%20Please%20set%20me%20up!"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btn.shared">
           💬 Order Shared Plan
         </a>
         <div class="full-account-opt">
-          <p class="full-account-label">Want a private full account?</p>
-          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Shahid%20VIP%20Full%20Account%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
+          <p class="full-account-label" data-i18n="btn.full.label">Want a private full account?</p>
+          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Shahid%20VIP%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Shahid%20VIP%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Shahid%20VIP%20Full%20Account%20%28Yearly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
-             target="_blank" rel="noopener" class="btn-full-account">
+             target="_blank" rel="noopener" class="btn-full-account" data-i18n="btn.full">
             🔒 Order Full Account
           </a>
         </div>
@@ -321,6 +249,10 @@
       <div id="disney" class="pricing-card fade-up">
         <img src="logo-disney.png.jpg" alt="Disney+" class="service-logo-img" />
         <div class="card-name">Disney+</div>
+        <div class="card-bill-toggle">
+          <button class="cbill cbill-active" data-p="monthly" data-i18n="billing.monthly">Monthly</button>
+          <button class="cbill" data-p="yearly" data-i18n="billing.yearly">Yearly</button>
+        </div>
         <div class="card-price">
           <span class="amount" data-monthly="$4" data-yearly="$20">$4</span>
           <span class="period">/ month</span>
@@ -328,22 +260,22 @@
         </div>
         <hr class="card-divider" />
         <ul class="card-features">
-          <li><span class="check">✓</span> Your own dedicated profile</li>
-          <li><span class="check">✓</span> Marvel, Star Wars &amp; Pixar</li>
-          <li><span class="check">✓</span> HD streaming on all devices</li>
+          <li><span class="check">✓</span> <span data-i18n="feat.profile">Your own dedicated profile</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.disney.content">Marvel, Star Wars & Pixar</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.disney.stream">HD streaming on all devices</span></li>
         </ul>
         <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Disney%2B%20%28%244%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Disney%2B%20%28%244%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Disney%2B%20%28Yearly%20-%20%2420%2Fyear%29%20from%20StreamVault.%20Please%20set%20me%20up!"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btn.shared">
           💬 Order Shared Plan
         </a>
         <div class="full-account-opt">
-          <p class="full-account-label">Want a private full account?</p>
-          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Disney%2B%20Full%20Account%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
+          <p class="full-account-label" data-i18n="btn.full.label">Want a private full account?</p>
+          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Disney%2B%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Disney%2B%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20a%20Disney%2B%20Full%20Account%20%28Yearly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
-             target="_blank" rel="noopener" class="btn-full-account">
+             target="_blank" rel="noopener" class="btn-full-account" data-i18n="btn.full">
             🔒 Order Full Account
           </a>
         </div>
@@ -353,6 +285,10 @@
       <div id="amazon" class="pricing-card fade-up">
         <img src="logo-amazon.png.png" alt="Amazon Prime" class="service-logo-img" />
         <div class="card-name">Amazon Prime</div>
+        <div class="card-bill-toggle">
+          <button class="cbill cbill-active" data-p="monthly" data-i18n="billing.monthly">Monthly</button>
+          <button class="cbill" data-p="yearly" data-i18n="billing.yearly">Yearly</button>
+        </div>
         <div class="card-price">
           <span class="amount" data-monthly="$4" data-yearly="$20">$4</span>
           <span class="period">/ month</span>
@@ -360,22 +296,22 @@
         </div>
         <hr class="card-divider" />
         <ul class="card-features">
-          <li><span class="check">✓</span> Your own watchlist &amp; profile</li>
-          <li><span class="check">✓</span> HD streaming available</li>
-          <li><span class="check">✓</span> Latest Amazon Originals</li>
+          <li><span class="check">✓</span> <span data-i18n="feat.amazon.watch">Your own watchlist & profile</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.amazon.stream">HD streaming available</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.amazon.content">Latest Amazon Originals</span></li>
         </ul>
         <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Amazon%20Prime%20%28%244%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Amazon%20Prime%20%28%244%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Amazon%20Prime%20%28Yearly%20-%20%2420%2Fyear%29%20from%20StreamVault.%20Please%20set%20me%20up!"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btn.shared">
           💬 Order Shared Plan
         </a>
         <div class="full-account-opt">
-          <p class="full-account-label">Want a private full account?</p>
-          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20an%20Amazon%20Prime%20Full%20Account%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
+          <p class="full-account-label" data-i18n="btn.full.label">Want a private full account?</p>
+          <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20an%20Amazon%20Prime%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20an%20Amazon%20Prime%20Full%20Account%20%28Monthly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
              data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20an%20Amazon%20Prime%20Full%20Account%20%28Yearly%29%20from%20StreamVault.%20Can%20you%20provide%20details%3F"
-             target="_blank" rel="noopener" class="btn-full-account">
+             target="_blank" rel="noopener" class="btn-full-account" data-i18n="btn.full">
             🔒 Order Full Account
           </a>
         </div>
@@ -387,6 +323,10 @@
           <img src="https://cdn.simpleicons.org/spotify/ffffff" alt="Spotify" />
         </div>
         <div class="card-name">Spotify Premium</div>
+        <div class="card-bill-toggle">
+          <button class="cbill cbill-active" data-p="monthly" data-i18n="billing.monthly">Monthly</button>
+          <button class="cbill" data-p="yearly" data-i18n="billing.yearly">Yearly</button>
+        </div>
         <div class="card-price">
           <span class="amount" data-monthly="$5" data-yearly="$25">$5</span>
           <span class="period">/ month</span>
@@ -394,14 +334,14 @@
         </div>
         <hr class="card-divider" />
         <ul class="card-features">
-          <li><span class="check">✓</span> Your own Spotify account</li>
-          <li><span class="check">✓</span> Ad-free music &amp; podcasts</li>
-          <li><span class="check">✓</span> Offline downloads enabled</li>
+          <li><span class="check">✓</span> <span data-i18n="feat.spotify.account">Your own Spotify account</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.spotify.music">Ad-free music & podcasts</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.spotify.offline">Offline downloads enabled</span></li>
         </ul>
         <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Spotify%20Premium%20%28%245%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Spotify%20Premium%20%28%245%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Spotify%20Premium%20%28Yearly%20-%20%2425%2Fyear%29%20from%20StreamVault.%20Please%20set%20me%20up!"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btn.wa">
           💬 Order via WhatsApp
         </a>
       </div>
@@ -410,6 +350,10 @@
       <div id="anghami" class="pricing-card fade-up">
         <img src="logo-anghami.png.png" alt="Anghami+" class="service-logo-img" />
         <div class="card-name">Anghami+</div>
+        <div class="card-bill-toggle">
+          <button class="cbill cbill-active" data-p="monthly" data-i18n="billing.monthly">Monthly</button>
+          <button class="cbill" data-p="yearly" data-i18n="billing.yearly">Yearly</button>
+        </div>
         <div class="card-price">
           <span class="amount" data-monthly="$5" data-yearly="$25">$5</span>
           <span class="period">/ month</span>
@@ -417,14 +361,14 @@
         </div>
         <hr class="card-divider" />
         <ul class="card-features">
-          <li><span class="check">✓</span> Your own Anghami account</li>
-          <li><span class="check">✓</span> Ad-free Arabic music</li>
-          <li><span class="check">✓</span> Offline listening enabled</li>
+          <li><span class="check">✓</span> <span data-i18n="feat.anghami.account">Your own Anghami account</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.anghami.music">Ad-free Arabic music</span></li>
+          <li><span class="check">✓</span> <span data-i18n="feat.anghami.offline">Offline listening enabled</span></li>
         </ul>
         <a href="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Anghami%2B%20%28%245%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-monthly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Anghami%2B%20%28%245%2Fmonth%29%20from%20StreamVault.%20Please%20set%20me%20up!"
            data-yearly="https://wa.me/96170307798?text=Hi!%20I%20want%20to%20subscribe%20to%20Anghami%2B%20%28Yearly%20-%20%2425%2Fyear%29%20from%20StreamVault.%20Please%20set%20me%20up!"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btn.wa">
           💬 Order via WhatsApp
         </a>
       </div>
@@ -432,7 +376,9 @@
     </div>
 
     <p style="text-align:center; color:var(--text-muted); font-size:0.88rem; margin-top:2.5rem;">
-      All plans are monthly and renewable. Prices are per person. Have questions? <a href="faq.html" style="color:var(--accent);">Check the FAQ</a> or <a href="contact.html" style="color:var(--accent);">contact us</a>.
+      <span data-i18n="pricing.footer">All plans are monthly and renewable. Prices are per person. Have questions?</span>
+      <a href="faq.html" style="color:var(--accent);" data-i18n="pricing.faq.link">Check the FAQ</a> ·
+      <a href="contact.html" style="color:var(--accent);" data-i18n="pricing.contact.link">contact us</a>.
     </p>
 
   </div>
@@ -447,57 +393,20 @@
         <span class="name">StreamVault</span>
       </a>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
         <a href="https://wa.me/96170307798" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-    <div class="footer-copy">
+    <div class="footer-copy" data-i18n="footer.copy">
       © 2025 StreamVault. All rights reserved. · Premium streaming, shared smart.
     </div>
   </div>
 </footer>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
-<script>
-  const toggle = document.getElementById('billingToggle');
-  const labelMonthly = document.getElementById('label-monthly');
-  const labelYearly = document.getElementById('label-yearly');
-
-  toggle.addEventListener('change', function () {
-    const isYearly = this.checked;
-
-    // Update label active state
-    labelMonthly.classList.toggle('active', !isYearly);
-    labelYearly.classList.toggle('active', isYearly);
-
-    // Update prices
-    document.querySelectorAll('.amount[data-monthly]').forEach(el => {
-      el.textContent = isYearly ? el.dataset.yearly : el.dataset.monthly;
-    });
-
-    // Update period text
-    document.querySelectorAll('.period').forEach(el => {
-      el.textContent = isYearly ? '/ year' : '/ month';
-    });
-
-    // Show/hide "or X / year" sub-text
-    document.querySelectorAll('.card-yearly').forEach(el => {
-      el.style.display = isYearly ? 'none' : '';
-    });
-
-    // Update WhatsApp shared plan button links
-    document.querySelectorAll('.btn-whatsapp[data-monthly]').forEach(el => {
-      el.href = isYearly ? el.dataset.yearly : el.dataset.monthly;
-    });
-
-    // Update full account button links
-    document.querySelectorAll('.btn-full-account[data-monthly]').forEach(el => {
-      el.href = isYearly ? el.dataset.yearly : el.dataset.monthly;
-    });
-  });
-</script>
 </body>
 </html>

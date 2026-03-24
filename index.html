@@ -18,12 +18,17 @@
     <span class="name">StreamVault</span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="nav-cta">💬 WhatsApp Us</a></li>
+    <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+    <li><a href="pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    <li><a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.whatsapp">💬 WhatsApp Us</a></li>
   </ul>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="ar">AR</button>
+  </div>
   <button class="hamburger" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
@@ -31,28 +36,27 @@
 
 <!-- Mobile menu -->
 <div class="mobile-menu">
-  <a href="index.html" class="active">Home</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="faq.html">FAQ</a>
-  <a href="contact.html">Contact</a>
-  <a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="mob-cta">💬 WhatsApp Us</a>
+  <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+  <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+  <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="mob-cta" data-i18n="nav.whatsapp">💬 WhatsApp Us</a>
 </div>
 
 <!-- ── Hero ───────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-glow"></div>
   <div class="container">
-    <div class="hero-badge">🔥 Premium Streaming at Unbeatable Prices</div>
-    <h1 class="hero-title">
-      All Platforms.<br />
-      <span class="gradient-text">One Interface.</span>
+    <div class="hero-badge" data-i18n="hero.badge">🔥 Premium Streaming at Unbeatable Prices</div>
+    <h1 class="hero-title" data-i18n-html="hero.title">
+      All Platforms.<br /><span class="gradient-text">One Interface.</span>
     </h1>
-    <p class="hero-sub">
+    <p class="hero-sub" data-i18n="hero.sub">
       Access Netflix, Shahid, Disney+, Prime, Spotify & Anghami — all at a fraction of the original price. Shared smart. Secured tight.
     </p>
     <div class="hero-ctas">
-      <a href="pricing.html" class="btn btn-primary">View All Plans →</a>
-      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+      <a href="pricing.html" class="btn btn-primary" data-i18n="hero.cta1">View All Plans →</a>
+      <a href="contact.html" class="btn btn-outline" data-i18n="hero.cta2">Contact Us</a>
     </div>
     <div class="hero-scroll">
       <div class="scroll-indicator"></div>
@@ -66,19 +70,19 @@
     <div class="stats-grid">
       <div class="stat-item fade-up">
         <div class="stat-value">6+</div>
-        <div class="stat-label">Premium Services</div>
+        <div class="stat-label" data-i18n="stats.services">Premium Services</div>
       </div>
       <div class="stat-item fade-up">
         <div class="stat-value">70%</div>
-        <div class="stat-label">Average Savings</div>
+        <div class="stat-label" data-i18n="stats.savings">Average Savings</div>
       </div>
       <div class="stat-item fade-up">
         <div class="stat-value">100+</div>
-        <div class="stat-label">Happy Customers</div>
+        <div class="stat-label" data-i18n="stats.customers">Happy Customers</div>
       </div>
       <div class="stat-item fade-up">
         <div class="stat-value">24/7</div>
-        <div class="stat-label">WhatsApp Support</div>
+        <div class="stat-label" data-i18n="stats.support">WhatsApp Support</div>
       </div>
     </div>
   </div>
@@ -88,9 +92,9 @@
 <section class="section">
   <div class="container">
     <div class="text-center" style="margin-bottom: 3.5rem;">
-      <p class="section-label">What We Offer</p>
-      <h2 class="section-title">All Your Favorites,<br /><span class="gradient-text">One Vault</span></h2>
-      <p class="section-desc">We cover the most-loved streaming and music platforms — all accessible through a simple WhatsApp order.</p>
+      <p class="section-label" data-i18n="services.label">What We Offer</p>
+      <h2 class="section-title" data-i18n-html="services.title">All Your Favorites,<br /><span class="gradient-text">One Vault</span></h2>
+      <p class="section-desc" data-i18n="services.desc">We cover the most-loved streaming and music platforms — all accessible through a simple WhatsApp order.</p>
     </div>
     <div class="services-grid">
       <a href="pricing.html#netflix" class="service-tile fade-up">
@@ -99,28 +103,28 @@
         </div>
         <div>
           <div class="service-tile-name">Netflix</div>
-          <div class="service-tile-sub">Movies &amp; Series</div>
+          <div class="service-tile-sub" data-i18n="tile.netflix.sub">Movies &amp; Series</div>
         </div>
       </a>
       <a href="pricing.html#shahid" class="service-tile fade-up">
         <img src="logo-shahid.png.png" alt="Shahid VIP" class="service-logo-img" />
         <div>
           <div class="service-tile-name">Shahid VIP</div>
-          <div class="service-tile-sub">Arabic &amp; Exclusive Content</div>
+          <div class="service-tile-sub" data-i18n="tile.shahid.sub">Arabic &amp; Exclusive Content</div>
         </div>
       </a>
       <a href="pricing.html#amazon" class="service-tile fade-up">
         <img src="logo-amazon.png.png" alt="Amazon Prime" class="service-logo-img" />
         <div>
           <div class="service-tile-name">Amazon Prime</div>
-          <div class="service-tile-sub">Movies &amp; Originals</div>
+          <div class="service-tile-sub" data-i18n="tile.amazon.sub">Movies &amp; Originals</div>
         </div>
       </a>
       <a href="pricing.html#disney" class="service-tile fade-up">
         <img src="logo-disney.png.jpg" alt="Disney+" class="service-logo-img" />
         <div>
           <div class="service-tile-name">Disney+</div>
-          <div class="service-tile-sub">Marvel, Disney &amp; Star Wars</div>
+          <div class="service-tile-sub" data-i18n="tile.disney.sub">Marvel, Disney &amp; Star Wars</div>
         </div>
       </a>
       <a href="pricing.html#spotify" class="service-tile fade-up">
@@ -129,14 +133,14 @@
         </div>
         <div>
           <div class="service-tile-name">Spotify Premium</div>
-          <div class="service-tile-sub">Music &amp; Podcasts</div>
+          <div class="service-tile-sub" data-i18n="tile.spotify.sub">Music &amp; Podcasts</div>
         </div>
       </a>
       <a href="pricing.html#anghami" class="service-tile fade-up">
         <img src="logo-anghami.png.png" alt="Anghami+" class="service-logo-img" />
         <div>
           <div class="service-tile-name">Anghami+</div>
-          <div class="service-tile-sub">Arabic Music</div>
+          <div class="service-tile-sub" data-i18n="tile.anghami.sub">Arabic Music</div>
         </div>
       </a>
     </div>
@@ -147,25 +151,25 @@
 <section class="how-it-works">
   <div class="container">
     <div class="text-center" style="margin-bottom: 3.5rem;">
-      <p class="section-label">Simple Process</p>
-      <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
-      <p class="section-desc">Getting your subscription takes minutes. No complicated sign-ups — just a WhatsApp message away.</p>
+      <p class="section-label" data-i18n="how.label">Simple Process</p>
+      <h2 class="section-title" data-i18n-html="how.title">How It <span class="gradient-text">Works</span></h2>
+      <p class="section-desc" data-i18n="how.desc">Getting your subscription takes minutes. No complicated sign-ups — just a WhatsApp message away.</p>
     </div>
     <div class="steps-grid">
       <div class="step-card fade-up">
         <div class="step-number">1</div>
-        <div class="step-title">Choose Your Plan</div>
-        <p class="step-desc">Browse our pricing page and pick the streaming service that fits your needs and budget.</p>
+        <div class="step-title" data-i18n="step1.title">Choose Your Plan</div>
+        <p class="step-desc" data-i18n="step1.desc">Browse our pricing page and pick the streaming service that fits your needs and budget.</p>
       </div>
       <div class="step-card fade-up">
         <div class="step-number">2</div>
-        <div class="step-title">Message on WhatsApp</div>
-        <p class="step-desc">Tap the WhatsApp button, send your order, and we'll confirm your subscription within minutes.</p>
+        <div class="step-title" data-i18n="step2.title">Message on WhatsApp</div>
+        <p class="step-desc" data-i18n="step2.desc">Tap the WhatsApp button, send your order, and we'll confirm your subscription within minutes.</p>
       </div>
       <div class="step-card fade-up">
         <div class="step-number">3</div>
-        <div class="step-title">Start Streaming</div>
-        <p class="step-desc">After a quick setup, you're live. Enjoy premium content at a fraction of the original price.</p>
+        <div class="step-title" data-i18n="step3.title">Start Streaming</div>
+        <p class="step-desc" data-i18n="step3.desc">After a quick setup, you're live. Enjoy premium content at a fraction of the original price.</p>
       </div>
     </div>
   </div>
@@ -175,12 +179,12 @@
 <section class="cta-section">
   <div class="container">
     <div class="cta-card fade-up">
-      <p class="section-label">Ready to Start?</p>
-      <h2 class="cta-title">Save Big on <span class="gradient-text">Premium Streaming</span></h2>
-      <p class="cta-desc">Join hundreds of customers who already enjoy top-tier streaming at unbeatable prices.</p>
+      <p class="section-label" data-i18n="cta.label">Ready to Start?</p>
+      <h2 class="cta-title" data-i18n-html="cta.title">Save Big on <span class="gradient-text">Premium Streaming</span></h2>
+      <p class="cta-desc" data-i18n="cta.desc">Join hundreds of customers who already enjoy top-tier streaming at unbeatable prices.</p>
       <div class="cta-buttons">
-        <a href="pricing.html" class="btn btn-primary">View All Plans</a>
-        <a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="btn" style="background:#25D366;color:#fff;">💬 Chat on WhatsApp</a>
+        <a href="pricing.html" class="btn btn-primary" data-i18n="cta.btn1">View All Plans</a>
+        <a href="https://wa.me/96170307798" target="_blank" rel="noopener" class="btn" style="background:#25D366;color:#fff;" data-i18n="cta.btn2">💬 Chat on WhatsApp</a>
       </div>
     </div>
   </div>
@@ -195,19 +199,20 @@
         <span class="name">StreamVault</span>
       </a>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
         <a href="https://wa.me/96170307798" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-    <div class="footer-copy">
+    <div class="footer-copy" data-i18n="footer.copy">
       © 2025 StreamVault. All rights reserved. · Premium streaming, shared smart.
     </div>
   </div>
 </footer>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

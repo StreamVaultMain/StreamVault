@@ -1047,6 +1047,69 @@ footer {
 .bg-spotify  { background: #1DB954; }
 .bg-anghami  { background: #E8154B; }
 
+/* ─── Language Switcher ────────────────────────── */
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.lang-btn {
+  padding: 0.25rem 0.55rem;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.lang-btn:hover { color: var(--text); }
+
+.lang-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ─── Per-Card Billing Toggle ──────────────────── */
+
+.card-bill-toggle {
+  display: flex;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 3px;
+  margin: 0.6rem 0 1rem;
+}
+
+.cbill {
+  flex: 1;
+  padding: 0.3rem 0;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.cbill.cbill-active {
+  background: var(--primary);
+  color: #fff;
+}
+
 /* ─── Animations ───────────────────────────────── */
 
 .fade-up {
