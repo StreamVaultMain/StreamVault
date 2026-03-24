@@ -398,6 +398,8 @@ img { max-width: 100%; display: block; }
   transition: all 0.3s;
 }
 
+a.service-tile { color: inherit; }
+
 .service-tile:hover {
   border-color: rgba(107,63,255,0.38);
   background: rgba(107,63,255,0.06);
