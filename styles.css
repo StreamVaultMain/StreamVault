@@ -918,6 +918,63 @@ footer {
   padding-top: 1.75rem;
 }
 
+/* ─── Service Logo Images ──────────────────────── */
+
+.service-logo-img {
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+.pricing-card .service-logo-img {
+  width: 62px; height: 62px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.service-tile .service-logo-img {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+}
+
+/* Full Account option on Netflix cards */
+.full-account-opt {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--card-border);
+  text-align: center;
+}
+
+.full-account-label {
+  font-size: 0.77rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.btn-full-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid rgba(107,63,255,0.35);
+  color: var(--accent);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-family: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+.btn-full-account:hover {
+  background: rgba(107,63,255,0.1);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
 /* ─── Brand Logos ──────────────────────────────── */
 
 .brand-logo {
